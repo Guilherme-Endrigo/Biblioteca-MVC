@@ -3,9 +3,48 @@
 }
 
 <div class="text-center">
-    <h1>Biblioteca Impacta</h1>
+    <h1 class="display-4">Biblioteca Impacta</h1>
     <p>
         Aqui você pode realizar empréstimos de livros!
     </p>
-    <div><a asp-controller="Livros" asp-action="Index">Veja aqui nosso acervo </a></div>
+    <div class="link"><a asp-controller="Livros" asp-action="Index">Veja aqui nosso acervo </a></div>
+    <img class="d-block w-100 pt-10 " src="https://w7.pngwing.com/pngs/631/232/png-transparent-computer-icons-book-book-angle-rectangle-triangle.png" width="16px" height="16px" alt="First slide">
+
+
+
+    <div class="carrosel-filmes"></div>
+    <div class="owl-carousel owl-theme ">
+        <div class="item zoom">
+            <img class="box-filme" src="~/imagem/Livro1.png" alt="" srcset="">
+        </div>
+        <div class="item zoom">
+            <img class="box-filme" src="~/imagem/Livro2.png" alt="" srcset="">
+        </div>
+        <div class="item zoom">
+            <img class="box-filme" src="~/imagem/Livro3.png" alt="" srcset="">
+        </div>
+        <div class="item zoom">
+            <img class="box-filme" src="~/imagem/Livro4.png" alt="" srcset="">
+        </div>
+        <div class="item zoom">
+            <img class="box-filme" src="~/imagem/Livro5.png" alt="" srcset="">
+        </div>
+        <div class="item zoom">
+            <img class="box-filme" src="~/imagem/Livro6.png" alt="" srcset="">
+        </div>
+        <div class="item zoom">
+            <img class="box-filme" src="~/imagem/Livro7.png" alt="" srcset="">
+        </div>
+
+
+    </div>
 </div>
+
+<img class="d-block w-100  " src="https://w7.pngwing.com/pngs/631/232/png-transparent-computer-icons-book-book-angle-rectangle-triangle.png" width="16px" height="16px" alt="First slide">
+
+</div>
+<div class="link2">
+    <div><a asp-action="Emprestar">Realize aqui o empréstimo do seu livro!</a></div>
+    <div><a asp-action="Emprestados">Livros Emprestados</a></div>
+</div>
+

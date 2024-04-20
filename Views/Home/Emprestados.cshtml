@@ -4,15 +4,6 @@
     ViewData["Title"] = "Emprestados";
 }
 
-
-<form method="post">
-    <div class="form-group">
-        <label asp-for="Search"></label>
-        <input asp-for="Search" />
-        <input type="submit" class="btn btn-outline-primary" />
-    </div>
-</form>
-
 @foreach (var emprestimo in Model.Emprestados)
 {
     var cssClass = !string.IsNullOrWhiteSpace(Model.Search) && emprestimo.Nome.Contains(Model.Search, StringComparison.InvariantCultureIgnoreCase) ? "text-info" : "";

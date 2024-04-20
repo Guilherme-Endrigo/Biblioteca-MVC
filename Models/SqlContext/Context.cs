@@ -7,6 +7,7 @@ namespace BibliotecaImpacta.Models.SqlContext
     {
         public DbSet<Categoria> Categorias { get; set; } //Uma tabela chamada Categorias
         public DbSet<Livro> Livros { get; set; }
+        public DbSet<Emprestimo> Emprestimos { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
 
         public Context(DbContextOptions<Context> options) : base(options)

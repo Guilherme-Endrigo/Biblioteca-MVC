@@ -1,3 +1,5 @@
+using System;
+
 namespace BibliotecaImpacta.Models
 {
     public class ErrorViewModel

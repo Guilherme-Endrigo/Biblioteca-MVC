@@ -5,7 +5,7 @@ namespace BibliotecaImpacta.Models
 {
     public class Categoria
     {
-        public int Id { get; set; } //Chave primária da tabela no BD
+        public int Id { get; set; }
 
 
         [Display(Name = "Descrição")]
