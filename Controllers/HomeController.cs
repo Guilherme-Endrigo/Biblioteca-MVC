@@ -42,14 +42,12 @@ namespace BibliotecaImpacta.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        // GET: Emprestar/Create
         public IActionResult Emprestar()
         {
             ViewData["LivroId"] = new SelectList(_context.Livros, "Id", "Nome");
             return View();
         }
 
-        // POST: Emprestar/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Emprestar([Bind("Id, Nome, Telefone, Confirmado, LivroId")] Emprestimo emprestimo)
@@ -83,7 +81,6 @@ namespace BibliotecaImpacta.Controllers
             return View(viewModel);
         }
 
-        // GET: Livros/Edit/5
         public async Task<IActionResult> Editar(int? id)
         {
             if (id == null)
@@ -100,7 +97,6 @@ namespace BibliotecaImpacta.Controllers
             return View(emprestimo);
         }
 
-        // POST: Editar/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Editar(int id, [Bind("Id, Nome, Telefone, Confirmado, LivroId")] Emprestimo emprestimo)
@@ -140,8 +136,6 @@ namespace BibliotecaImpacta.Controllers
             return _context.Emprestimos.Any(e => e.Id == id);
         }
 
-
-        // GET: Deletar/Delete/5
         public async Task<IActionResult> Deletar(int? id)
         {
             if (id == null)

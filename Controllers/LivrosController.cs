@@ -17,14 +17,12 @@ namespace BibliotecaImpacta.Controllers
             _context = context;
         }
 
-        // GET: Livros
         public async Task<IActionResult> Index()
         {
             var context = _context.Livros.Include(p => p.Categoria);
             return View(await context.ToListAsync());
         }
 
-        // GET: Livros/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -43,14 +41,12 @@ namespace BibliotecaImpacta.Controllers
             return View(livro);
         }
 
-        // GET: Livros/Create
         public IActionResult Create()
         {
             ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Descricao");
             return View();
         }
 
-        // POST: Livros/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id, Nome, Autor, Editora, Ano, CategoriaId")] Livro livro)
@@ -65,7 +61,6 @@ namespace BibliotecaImpacta.Controllers
             return View(livro);
         }
 
-        // GET: Livros/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -82,7 +77,6 @@ namespace BibliotecaImpacta.Controllers
             return View(livro);
         }
 
-        // POST: Livros/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id, Nome, Autor, Editora, Ano, CategoriaId")] Livro livro)
@@ -116,7 +110,6 @@ namespace BibliotecaImpacta.Controllers
             return View(livro);
         }
 
-        // GET: Livros/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -135,7 +128,6 @@ namespace BibliotecaImpacta.Controllers
             return View(livro);
         }
 
-        // POST: Livros/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

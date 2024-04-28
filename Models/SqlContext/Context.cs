@@ -5,7 +5,7 @@ namespace BibliotecaImpacta.Models.SqlContext
 {
     public class Context : DbContext
     {
-        public DbSet<Categoria> Categorias { get; set; } //Uma tabela chamada Categorias
+        public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Livro> Livros { get; set; }
         public DbSet<Emprestimo> Emprestimos { get; set; }
         public DbSet<Cliente> Clientes { get; set; }

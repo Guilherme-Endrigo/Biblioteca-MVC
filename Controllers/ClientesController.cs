@@ -17,14 +17,12 @@ namespace BibliotecaImpacta.Controllers
             _context = context;
         }
 
-        // GET: Cliente
         public async Task<IActionResult> Index()
         {
             var context = _context.Clientes.Include(p => p.Categoria);
             return View(await context.ToListAsync());
         }
 
-        // GET: Cliente/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -43,16 +41,12 @@ namespace BibliotecaImpacta.Controllers
             return View(cliente);
         }
 
-        // GET: Clientes/Create
         public IActionResult Create()
         {
             ViewData["CategoriaId"] = new SelectList(_context.Categorias, "Id", "Descricao");
             return View();
         }
 
-        // POST: Clientes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -68,7 +62,6 @@ namespace BibliotecaImpacta.Controllers
             return View(cliente);
         }
 
-        // GET: Clientes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -85,9 +78,6 @@ namespace BibliotecaImpacta.Controllers
             return View(cliente);
         }
 
-        // POST: Clientes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id, Nome, Telefone, Endereço, Idade, CategoriaId")] Cliente cliente)
@@ -121,7 +111,6 @@ namespace BibliotecaImpacta.Controllers
             return View(cliente);
         }
 
-        // GET: Livros/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -140,7 +129,6 @@ namespace BibliotecaImpacta.Controllers
             return View(cliente);
         }
 
-        // POST: Livros/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -151,7 +139,7 @@ namespace BibliotecaImpacta.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ClienteExists(int id)
+        public bool ClienteExists(int id)
         {
             return _context.Clientes.Any(e => e.Id == id);
         }
