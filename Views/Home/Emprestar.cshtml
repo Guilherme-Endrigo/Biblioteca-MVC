@@ -1,4 +1,5 @@
 ﻿@model Emprestimo
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 <h1>Cadastro para Empréstimo de Livro</h1>
 
@@ -6,32 +7,46 @@
 
     <div asp-validation-summary="All"></div>
 
-    <div>
-        <label asp-for="Nome">Digite seu Nome</label>
-        <input asp-for="Nome" style="width: 253px"  />
-        <span asp-validation-for="Nome"></span>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" title="Nome"><i class="fas fa-user"></i></span>
+            </div>
+            <select asp-for="Nome" class="form-control" asp-items="ViewBag.ClienteNome"></select>
+        </div>
     </div>
 
-    <div>
-        <label asp-for="Telefone">Digite seu Telefone</label>
-        <input asp-for="Telefone" />
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" title="Telefone para contato"><i class="fas fa-phone"></i></span>
+            </div>
+            <input asp-for="Telefone" placeholder="Digite seu Telefone" class="form-control" />
+        </div>
         <span asp-validation-for="Telefone"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="LivroId" class="control-label"></label>
-        <select asp-for="LivroId" class="form-control" asp-items="ViewBag.LivroId"></select>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" title="Livro"><i class="fas fa-book"></i></span>
+            </div>
+            <select asp-for="LivroId" class="form-control" asp-items="ViewBag.LivroId"></select>
+        </div>
     </div>
 
-
-    <div>
-        <label asp-for="Confirmado">Você confirma o empréstimo?</label>
-        <select asp-for="Confirmado">
-            <option value="">Escolha a opção</option>
-            <option value="true">Sim</option>
-            <option value="false">Não</option>
-        </select>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" title="Você confirma o empréstimo?"><i class="fas fa-check-circle"></i></span>
+            </div>
+            <select asp-for="Confirmado" class="form-control">
+                <option value="">Escolha a opção</option>
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+            </select>
+        </div>
         <span asp-validation-for="Confirmado"></span>
     </div>
-    <button type="submit">Solicitar Empréstimo</button>
+    <button type="submit" class="btn btn-secondary">Solicitar Empréstimo</button>
 </form>

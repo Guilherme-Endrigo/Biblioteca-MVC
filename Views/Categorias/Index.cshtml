@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<BibliotecaImpacta.Models.Categoria>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 @{
     ViewData["Title"] = "Index";
@@ -7,15 +8,15 @@
 <h1>Categorias</h1>
 
 <p>
-    <a asp-action="Create">Nova Categoria</a>
+    <a asp-action="Create" class="btn btn-secondary"><i class="fas fa-plus-circle"></i> Nova Categoria</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-hover">
+    <thead class="thead-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Descricao)
             </th>
-            <th></th>
+            <th>Ações</th>
         </tr>
     </thead>
     <tbody>
@@ -26,9 +27,9 @@
                     @Html.DisplayFor(modelItem => item.Descricao)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" title="Editar"><i class="fas fa-edit"></i></a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" title="Detalhes"><i class="fas fa-info-circle"></i></a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" title="Deletar"><i class="fas fa-trash-alt"></i></a>
                 </td>
             </tr>
         }

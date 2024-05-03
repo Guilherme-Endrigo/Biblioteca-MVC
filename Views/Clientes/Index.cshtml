@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<BibliotecaImpacta.Models.Cliente>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 @{
     ViewData["Title"] = "Index";
@@ -9,11 +10,11 @@
 
 
 <p>
-    <a asp-action="Create">Adicionar Cliente</a>
+    <a asp-action="Create" class="btn btn-secondary"><i class="fas fa-plus-circle"></i>Adicionar Cliente</a>
 </p>
 
-<table class="table">
-    <thead>
+<table class="table table-hover">
+    <thead class="thead-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
@@ -27,36 +28,37 @@
             <th>
                 @Html.DisplayNameFor(model => model.Idade)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categoria)
+            <th title="Categoria favorita">
+                <i class="fas fa-star"></i>
             </th>
+            <th>Ações</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Telefone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Endereço)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Idade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Categoria.Descricao)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telefone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Endereço)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Idade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categoria.Descricao)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" title="Editar"><i class="fas fa-edit"></i></a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" title="Detalhes"><i class="fas fa-info-circle"></i></a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" title="Deletar"><i class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>

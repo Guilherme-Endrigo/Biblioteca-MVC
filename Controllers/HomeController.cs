@@ -44,11 +44,12 @@ namespace BibliotecaImpacta.Controllers
 
         public IActionResult Emprestar()
         {
+            ViewData["ClienteNome"] = new SelectList(_context.Clientes, "Id", "Nome");
             ViewData["LivroId"] = new SelectList(_context.Livros, "Id", "Nome");
             return View();
         }
 
-        [HttpPost]
+    [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Emprestar([Bind("Id, Nome, Telefone, Confirmado, LivroId")] Emprestimo emprestimo)
         {

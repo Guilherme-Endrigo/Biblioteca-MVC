@@ -1,5 +1,9 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
 
 .navbar {
     background-color: #fff;
@@ -78,10 +82,9 @@ html {
 }
 
 body {
-    margin-bottom: 3.75rem; 
+    margin-bottom: 3.75rem;
     background: url(https://media.istockphoto.com/photos/brown-recycled-paper-crumpled-texture-background-cream-old-vintage-picture-id1278709873?b=1&k=20&m=1278709873&s=170667a&w=0&h=I7KaFvQN4G7p6EjkFNfKDr-9RUsNUPV8vTVhCSdG_pQ=) no-repeat;
     background-size: cover;
-    font-family: Bradley Hand, cursive;
     align-content: center;
 }
 
@@ -112,12 +115,13 @@ body {
 }
 
 h1 {
-    font-family: Bradley Hand, cursive;
+    font-family: 'Roboto Slab', serif;
     font-weight: 900;
     margin-bottom: 2.5rem;
     color: black;
     margin-top: 1.5rem;
 }
+
 
 p {
     font-weight: 900;
