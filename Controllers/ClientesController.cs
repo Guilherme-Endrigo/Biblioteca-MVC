@@ -78,6 +78,7 @@ namespace BibliotecaImpacta.Controllers
             return View(cliente);
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id, Nome, Telefone, Endereço, Idade, CategoriaId")] Cliente cliente)
