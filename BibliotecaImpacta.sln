@@ -5,7 +5,7 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BibliotecaImpacta", "BibliotecaImpacta.csproj", "{B0E902C9-2A67-4746-9DE4-2861A7CBC2C5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject", "..\TestProject\testes\TestProject.csproj", "{03DFF3BB-5BBE-483D-BCB5-41F702185D34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "impactaBibliotecaTest", "..\impactaBibliotecaTest\impactaBibliotecaTest.csproj", "{0657FE9B-07EB-455A-8541-A0FB99D69DF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{B0E902C9-2A67-4746-9DE4-2861A7CBC2C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0E902C9-2A67-4746-9DE4-2861A7CBC2C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0E902C9-2A67-4746-9DE4-2861A7CBC2C5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{03DFF3BB-5BBE-483D-BCB5-41F702185D34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03DFF3BB-5BBE-483D-BCB5-41F702185D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03DFF3BB-5BBE-483D-BCB5-41F702185D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03DFF3BB-5BBE-483D-BCB5-41F702185D34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0657FE9B-07EB-455A-8541-A0FB99D69DF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0657FE9B-07EB-455A-8541-A0FB99D69DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0657FE9B-07EB-455A-8541-A0FB99D69DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0657FE9B-07EB-455A-8541-A0FB99D69DF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
