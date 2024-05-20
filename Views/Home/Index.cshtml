@@ -3,48 +3,47 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Biblioteca Impacta</h1>
-    <p>
-        Aqui você pode realizar empréstimos de livros!
-    </p>
+    <h1 class="display-4" style="color: darkblue;">Biblioteca Impacta </h1>
+    <h2>Conectando Mentes, Construindo Futuros!</h2>
+
     <div class="link"><a asp-controller="Livros" asp-action="Index" class="btn btn-secondary">Veja aqui nosso acervo</a></div>
     <img class="d-block w-100 pt-10 " src="https://w7.pngwing.com/pngs/631/232/png-transparent-computer-icons-book-book-angle-rectangle-triangle.png" width="16px" height="16px" alt="First slide">
 
 
 
     <div class="carrosel-filmes"></div>
-    <div class="owl-carousel owl-theme ">
+    <div class="owl-carousel owl-theme">
         <div class="item zoom">
-            <img class="box-filme" src="~/imagem/Livro1.png" alt="" srcset="">
+            <img class="box-filme" src="~/imagem/Livro1.png" alt="Mais esperto que o diabo" srcset="">
         </div>
         <div class="item zoom">
-            <img class="box-filme" src="~/imagem/Livro2.png" alt="" srcset="">
+            <img class="box-filme" src="~/imagem/Livro2.png" alt="A garota do lago" srcset="">
         </div>
         <div class="item zoom">
-            <img class="box-filme" src="~/imagem/Livro3.png" alt="" srcset="">
+            <img class="box-filme" src="~/imagem/Livro3.png" alt="O poder do Habito" srcset="">
         </div>
         <div class="item zoom">
-            <img class="box-filme" src="~/imagem/Livro4.png" alt="" srcset="">
+            <img class="box-filme" src="~/imagem/Livro4.png" alt="Do mil ao milhão" srcset="">
         </div>
         <div class="item zoom">
-            <img class="box-filme" src="~/imagem/Livro5.png" alt="" srcset="">
+            <img class="box-filme" src="~/imagem/Livro5.png" alt="Mindset, a nova psicologia do sucesso" srcset="">
         </div>
         <div class="item zoom">
-            <img class="box-filme" src="~/imagem/Livro6.png" alt="" srcset="">
+            <img class="box-filme" src="~/imagem/Livro6.png" alt="Revolução dos bichos" srcset="">
         </div>
         <div class="item zoom">
-            <img class="box-filme" src="~/imagem/Livro7.png" alt="" srcset="">
+            <img class="box-filme" src="~/imagem/Livro7.png" alt="A rainha vermelha" srcset="">
         </div>
-
-
     </div>
 </div>
 
-<img class="d-block w-100  " src="https://w7.pngwing.com/pngs/631/232/png-transparent-computer-icons-book-book-angle-rectangle-triangle.png" width="16px" height="16px" alt="First slide">
 
-</div>
-<div class="link2">
-    <div><a asp-action="Emprestar">Realize aqui o empréstimo do seu livro!</a></div>
-    <div><a asp-action="Emprestados">Livros Emprestados</a></div>
+
+
+<div>
+     <div>
+        <a asp-action="Emprestar" class="btn btn-primary">Realize aqui o empréstimo do seu livro!</a>
+        <a asp-action="Emprestados" class="btn btn-secondary">Livros Emprestados</a>
+    </div>
 </div>
 

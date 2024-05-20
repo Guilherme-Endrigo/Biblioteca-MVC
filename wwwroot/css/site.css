@@ -94,7 +94,6 @@ body {
     padding: 0.5rem;
     white-space: nowrap;
     line-height: 3.75rem; 
-    color: antiquewhite;
 }
 
 /* Sticky Carousel styles
@@ -151,14 +150,6 @@ a:hover {
     padding: 0.3125rem 0; 
     float: left;
     margin-bottom: 0.625rem; 
-}
-
-.link2 {
-    text-transform: uppercase;
-    background: #d4cfaa;
-    color: black;
-    text-align: center;
-    margin-top: 0.625rem;
 }
 
 .carrosel-filmes {
