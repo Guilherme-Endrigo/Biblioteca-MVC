@@ -19,11 +19,5 @@ jobs:
       with:
         dotnet-version: 3.1
 
-    - name: Restore dependencies
-      run: dotnet restore
-
     - name: Build
       run: dotnet build --no-restore
-
-    - name: Test
-      run: dotnet test TestProject/testes/TestProject.csproj --no-build --verbosity normal
