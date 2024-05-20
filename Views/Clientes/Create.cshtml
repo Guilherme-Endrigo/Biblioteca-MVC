@@ -1,4 +1,5 @@
-﻿@model BibliotecaImpacta.Models.Cliente
+﻿ @model BibliotecaImpacta.Models.Cliente
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 @{
     ViewData["Title"] = "Create";
@@ -6,47 +7,64 @@
 
 <h1>Adicionar Cliente</h1>
 
-<h4>Clientes</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Telefone" class="control-label"></label>
-                <input asp-for="Telefone" class="form-control" />
-                <span asp-validation-for="Telefone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Endereço" class="control-label"></label>
-                <input asp-for="Endereço" class="form-control" />
-                <span asp-validation-for="Endereço" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Idade" class="control-label"></label>
-                <input asp-for="Idade" class="form-control" />
-                <span asp-validation-for="Idade" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CategoriaId" class="control-label"></label>
-                <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
-            </div>
+<form method="post" asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" title="Nome"><i class="fas fa-user"></i></span>
             </div>
-        </form>
+            <input asp-for="Nome" class="form-control" />
+        </div>
+        <span asp-validation-for="Nome" class="text-danger"></span>
     </div>
-</div>
 
-<div>
-    <a asp-action="Index">Voltar</a>
-</div>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" title="Telefone"><i class="fas fa-phone"></i></span>
+            </div>
+            <input asp-for="Telefone" class="form-control" />
+        </div>
+        <span asp-validation-for="Telefone" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" title="Endereço"><i class="fas fa-map-marker-alt"></i></span>
+            </div>
+            <input asp-for="Endereço" class="form-control" />
+        </div>
+        <span asp-validation-for="Endereço" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" title="Idade"><i class="fas fa-birthday-cake"></i></span>
+            </div>
+            <input asp-for="Idade" class="form-control" />
+        </div>
+        <span asp-validation-for="Idade" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" title="Categoria"><i class="fas fa-tags"></i></span>
+            </div>
+            <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
+        </div>
+        <span asp-validation-for="CategoriaId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+    </div>
+</form>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
